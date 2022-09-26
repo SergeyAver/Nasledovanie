@@ -5,7 +5,7 @@ import ru.netology.domain.Product;
 import ru.netology.domain.Smartphone;
 import ru.netology.repository.ProductRepository;
 
-public class manager {
+public class Manager {
     ProductRepository repository;
 
     public manager(ProductRepository repository) {
@@ -35,7 +35,7 @@ public class manager {
 
     public boolean matches(Product product, String search) {
         if (product instanceof Book) {
-            Book book = (Book) product;
+            Book[] book = (Book) product;
             if (book.getTitle().equalsIgnoreCase(search)) {
                 return true;
             }
